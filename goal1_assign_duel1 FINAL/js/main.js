@@ -1,10 +1,8 @@
 /**JOB ROBERTS
  * PWA1
- * Duel Fight Game - FINISHED
+ * Duel Fight Game - Complete
  * Date: 11/27/14
 
- Assignment 1
- Part 1/3 of series
 */
 //CONSOLE LOG START PROGRAM
 // self-executing function
