@@ -1,7 +1,7 @@
 /**JOB ROBERTS
  * PWA1
- * Duel Fight Game - Complete
- * Date: 11/27/14
+ * Duel Fight Game -Version 2
+ * Date: 12/02/14
 
 */
 //CONSOLE LOG START PROGRAM
@@ -27,7 +27,7 @@
 
     // After user clicks "OK"button run the main function of the game and loop through each round.
     function fight(){
-        alert(soilder1[0]+soilder1[2]+"  *START*  "+soilder2[0]+soilder2[2]); // Pop-up player #1 & player #2 name and health
+        alert(soilder1[0]+soilder1[2]+"  *START*  "+soilder2[0]+soilder2[2]); // Alert box using arrays to display FIGHTERS health and damage!!
 
         //Loop through the rounds up to 10 rounds; If i < 10 continue to next round
         for (var i = 0; i < 10; i++)
@@ -51,7 +51,7 @@
             soilder2[2]-=f2;
 
 
-
+             // *OLD*
             //inflict damage
            // playerOneHealth-=f1; //playerOne health =playerOneHealth-f1
             //playerTwoHealth-=f2; //playerTwoHealth=playerTwoHealth-f2
@@ -68,9 +68,9 @@
             {
                 round++;                                   // The fighters continue to next round
                 //Tell pop-up to display in the browser
-
+                 //alert box using arrays to display each round is over!!
                 alert(soilder1[0]+":"+soilder1[2]+"  *ROUND "+round+" OVER"+"* "+soilder2[0]+":"+soilder2[2]);
-                //alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
+                //*OLD* alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
 
             } else{
 
@@ -83,15 +83,15 @@
           //Run the "Winner Check" function If there is a "Winner" show winner If not End the round.
     function winnerCheck(){
         var result="no winner";
-                                   // No Winner variable is declared
-        if (soilder1[2]<1 && soilder2[2]<1)        // Condition statement that checks players health
+                                   // Condition executed using Arrays!
+        if (soilder1[2]<1 && soilder2[2]<1)        // Condition statement that checks players health against each other
         {
             result = "You Both Die";
-                                  // If Players health are both '0' than display result in pop-up
+              //Else if condition using Arrays!                                          // If Players health are both '0' than display result in pop-up
         } else if(soilder1[2]<1){                      // Run the function to check Player #1 health
             result = soilder2[0]+ "WINS!!!";               // If player #1 health is < 1 Display pop-up in browser player #2 wins
         } else if (soilder2[2]<1)                      // If player #2 health is < 1 Display pop-up in browser player # 1 Wins
-        {
+        {     // result prints using Array!!
             result = soilder1[0] +" WINS!!!"
         }
        return result;                                      //  Display pop-up in browser the "WINNER" of the game
