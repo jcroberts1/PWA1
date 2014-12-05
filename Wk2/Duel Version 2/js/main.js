@@ -11,8 +11,8 @@
     console.log("FIGHT!!!");                        // Display to the Console: "FIGHT"!!(start program)
 
     //Fighter's damage and health using Arrays!
-    var soilder1 = ["BuddyBoy",20,100];                    // Fighter #1  name variable declared
-    var soilder2 = ["Coda",20,100];                   // Fighter #2 name Variable declared
+    var soldier1 = ["BuddyBoy",20,100];                    // Fighter #1  name variable declared
+    var soldier2 = ["Coda",20,100];                   // Fighter #2 name Variable declared
 
     //player damage
     //var player1Damage = 20;                        // Variable for damage to be deducted from fighter#1
@@ -27,16 +27,16 @@
 
     // After user clicks "OK"button run the main function of the game and loop through each round.
     function fight(){
-        alert(soilder1[0]+soilder1[2]+"  *START*  "+soilder2[0]+soilder2[2]); // Alert box using arrays to display FIGHTERS health and damage!!
+        alert(soldier1[0]+soldier1[2]+"  *START*  "+soldier2[0]+soldier2[2]); // Alert box using arrays to display FIGHTERS health and damage!!
 
         //Loop through the rounds up to 10 rounds; If i < 10 continue to next round
         for (var i = 0; i < 10; i++)
         {
            //Defined damage using Arrays!
-           var minDamage1 = soilder1[1] * .5;
-           var minDamage2 = soilder2[1] * .5;
-           var f1 = Math.floor(Math.random()*(soilder1[1]-minDamage1)+minDamage1);
-           var f2 = Math.floor(Math.random()*(soilder2[1]-minDamage2)+minDamage2);
+           var minDamage1 = soldier1[1] * .5;
+           var minDamage2 = soldier2[1] * .5;
+           var f1 = Math.floor(Math.random()*(soldier1[1]-minDamage1)+minDamage1);
+           var f2 = Math.floor(Math.random()*(soldier2[1]-minDamage2)+minDamage2);
 
 
             //random formula is - Math.floor(Math.random() * (max - min) + min);
@@ -47,8 +47,8 @@
 
 
            //Inflict Damage using Arrays!
-            soilder1[2]-=f1;
-            soilder2[2]-=f2;
+            soldier1[2]-=f1;
+            soldier2[2]-=f2;
 
 
              // *OLD*
@@ -57,7 +57,7 @@
             //playerTwoHealth-=f2; //playerTwoHealth=playerTwoHealth-f2
 
             //Console.log to check on the progress of each player
-            console.log(soilder1[2]+" "+soilder2[2]);
+            console.log(soldier1[2]+" "+soldier2[2]);
 
             //check for victor
             var result = winnerCheck();                    // Check to see who the winner is
@@ -69,7 +69,7 @@
                 round++;                                   // The fighters continue to next round
                 //Tell pop-up to display in the browser
                  //alert box using arrays to display each round is over!!
-                alert(soilder1[0]+":"+soilder1[2]+"  *ROUND "+round+" OVER"+"* "+soilder2[0]+":"+soilder2[2]);
+                alert(soldier1[0]+":"+soldier1[2]+"  *ROUND "+round+" OVER"+"* "+soldier2[0]+":"+soldier2[2]);
                 //*OLD* alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
 
             } else{
@@ -84,15 +84,15 @@
     function winnerCheck(){
         var result="no winner";
                                    // Condition executed using Arrays!
-        if (soilder1[2]<1 && soilder2[2]<1)        // Condition statement that checks players health against each other
+        if (soldier1[2]<1 && soldier2[2]<1)        // Condition statement that checks players health against each other
         {
             result = "You Both Die";
               //Else if condition using Arrays!                                          // If Players health are both '0' than display result in pop-up
-        } else if(soilder1[2]<1){                      // Run the function to check Player #1 health
-            result = soilder2[0]+ "WINS!!!";               // If player #1 health is < 1 Display pop-up in browser player #2 wins
-        } else if (soilder2[2]<1)                      // If player #2 health is < 1 Display pop-up in browser player # 1 Wins
+        } else if(soldier1[2]<1){                      // Run the function to check Player #1 health
+            result = soldier2[0]+ "WINS!!!";               // If player #1 health is < 1 Display pop-up in browser player #2 wins
+        } else if (soldier2[2]<1)                      // If player #2 health is < 1 Display pop-up in browser player # 1 Wins
         {     // result prints using Array!!
-            result = soilder1[0] +" WINS!!!"
+            result = soldier1[0] +" WINS!!!"
         }
        return result;                                      //  Display pop-up in browser the "WINNER" of the game
     }
