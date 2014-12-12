@@ -10,7 +10,7 @@
 
     // Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
     var resultsDIV = document.getElementById("results"),
-        searchInput = document.forms[0].search,
+        searchInput = document.forms[0].search;
         currentSearch = '';
 
     // Validates search query
@@ -19,7 +19,7 @@
         var valid = true;
 
         // Trim whitespace from start and end of search query
-        ;
+
 
         // Check search length, must have 3 characters
         if (query.length < 3) {
@@ -30,17 +30,17 @@
 
         console.log("validate end");
         return valid;
-    };
+    }
 
     // Finds search matches
     var search = function (query) {
         console.log("Search Function");
 
-        var i, dbLen,
-            j, qLen;
+
+
 
         // split the user's search query string into an array
-        var queryArray = query.split(" ");
+         queryArray = query.split(" ");
         console.log(queryArray);
 
         // array to store matched results from database.js
@@ -54,13 +54,13 @@
             var dbTitleEnd = db[i].indexOf('|');
             console.log('db[i]: ' + db[i]);
             console.log('dbTitleEnd: ' + dbTitleEnd);
-            var dbItems = db[i].toLowerCase().substring(0, dbTitleEnd);
+            var dbItems = db[i].toLowerCase().substring(0, dbTitleEnd);//fixed camel case toLowerCase!!
             console.log(dbItems);
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
             for (var j = 0, qLen = queryArray.length; j < qLen; j++) {
-                var qItem = queryArray[j].toLowerCase();
+                var qItem = queryArray[j].toLowerCase();//fixed error camel case toLowerCase!!
                 console.log('query ' + qItem);
 
                 // is the keyword anywhere in the video title?
@@ -100,14 +100,15 @@
         // THE NEXT 4 LINES ARE CORRECT.
         var html = '<p>Results</p>',
             title,
-            url;
+            url
+        ;
 
         // loop through all the results search() function
-        for (var i = 0, len = results.length; i < len; i++) {
+        for (var i = 0, j = results.length; i < j; i++) {
             // title of video ends with pipe
             // pull the title's string using index numbers
             console.log(results[i]);
-            var titleEnd = results[i].indexOf('|');
+            titleEnd = results[i].indexOf('|');
             title = results[i].substring(0, titleEnd);
 
             // pull the video url after the title
