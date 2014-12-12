@@ -1,8 +1,8 @@
 
 //Job Roberts
-//Date:29Nov2014
+//Date:12Dec2014
 //Class: PWA1
-//Assignment: ANALYZE Buggy Search v1
+//Assignment: Debug Search Final
 
 // Create privatized scope using a self-executing function
 (function() {
