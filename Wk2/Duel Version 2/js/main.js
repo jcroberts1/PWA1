@@ -9,17 +9,17 @@
 (function(){
 
     console.log("FIGHT!!!");                        // Display to the Console: "FIGHT"!!(start program)
-var fighter1_txt = document.querySelector("#C").querySelector("p");
-var fighter2_txt = document.querySelector("#Bb").querySelector("p");
-var round_txt = document.querySelector("h5");
-var button = document.getElementById("fight_btn");
+var fighter1_txt = document.querySelector("#C").querySelector("p"); // DOM defined for fighter 1
+var fighter2_txt = document.querySelector("#Bb").querySelector("p");// DOM Defined for fighter 2
+var round_txt = document.querySelector("h5");// DOM Defined for heading
+var button = document.getElementById("fight_btn");//DOM defined for button
 
     console.log();
 //Click Event
 button.addEventListener("click", fight, false);
 
 
-    var fighters =[
+    var fighters =[           // Fighters name variable defined
         {
             name:"Coda",
             damage:20,
