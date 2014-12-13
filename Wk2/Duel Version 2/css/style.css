@@ -6,21 +6,12 @@ body{
 	background: url('../images/duel_bg.png') no-repeat;
 }
 
-#mytitle{
-    padding: 24px;
-    margin: -89px 100px -6px 10px;
-    text-align: center;
-    font-size: 25px;
-
-}
-
-
 #scores {
     background: #B82500;
     width: 100%;
     height: 50px;
-    margin: 60px 0px -35px 1px;
-    padding: 49px;
+    margin: 25px 0px 2px 4px;
+    padding: 10px
 }
 
 #Coda{
@@ -87,7 +78,7 @@ body{
 	font-family:'Open Sans',arial;
 	font-size:20px;
 	font-weight:bold;
-	padding:10px 35px;
+	padding:8px 25px;
 	text-decoration:none;
 }
 
